@@ -18,7 +18,7 @@ let root = reader.read();
 
 for(let i = 0; i < root.children.length; i++) {
     let dataSource = root.children[i].asOrgChartObject();
-    let filename = `./site/section-${root.children[i].navIndexCode}.html`;
+    let filename = `./docs/section-${root.children[i].navIndexCode}.html`;
     let title = `Section ${root.children[i].navIndexCode} - ${root.children[i].navTitle}`;
     outputFile(filename, title, dataSource);
 }
