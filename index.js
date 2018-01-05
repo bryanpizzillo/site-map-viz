@@ -49,7 +49,6 @@ function outputIndex(pages) {
               </style>
             </head>
             <body>
-              <div id="chart-container"></div>
               <script type="text/javascript" src="js/jquery.min.js"></script>
               <ul>
             `);
