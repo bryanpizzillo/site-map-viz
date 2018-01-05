@@ -15,12 +15,56 @@ const logger = winston.createLogger({
 
 let reader = new ExcelTreeNodeReader(logger, './data/nav0103.xlsx');
 let root = reader.read();
+let sections = [];
 
 for(let i = 0; i < root.children.length; i++) {
     let dataSource = root.children[i].asOrgChartObject();
-    let filename = `./docs/section-${root.children[i].navIndexCode}.html`;
+    let filename = `section-${root.children[i].navIndexCode}.html`;
+    let filepath = `./docs/${filename}`;
     let title = `Section ${root.children[i].navIndexCode} - ${root.children[i].navTitle}`;
-    outputFile(filename, title, dataSource);
+    sections.push({
+        title: title,
+        file: filename
+    });
+    outputFile(filepath, title, dataSource);
+}
+
+outputIndex(sections);
+
+function outputIndex(pages) {
+    let stream = fs.createWriteStream('./docs/index.html');
+    
+        stream.once('open', fd => {
+            stream.write(`<!DOCTYPE html>
+            <html lang="en">
+            <head>
+              <meta charset="utf-8">
+              <title>Index</title>          
+              <link rel="stylesheet" href="css/font-awesome.min.css">
+              <link rel="stylesheet" href="css/jquery.orgchart.css">
+              <link rel="stylesheet" href="css/style.css">
+              <style type="text/css">
+                #chart-container { height:  620px; }
+                .orgchart { background: white; }
+              </style>
+            </head>
+            <body>
+              <div id="chart-container"></div>
+              <script type="text/javascript" src="js/jquery.min.js"></script>
+              <ul>
+            `);
+
+            pages.forEach(page => {
+                stream.write(`<li><a href="${page.file}">${page.title}</a></li>`)
+            })
+
+            stream.end(`
+                </ul>
+                </body>
+              </html>            
+            `);
+            
+        })    
 }
 
 function outputFile(filename, title, dataSource) {
