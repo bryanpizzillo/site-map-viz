@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="utf-8">
+          <title>Section 1.18 - Publications</title>          
+          <link rel="stylesheet" href="css/font-awesome.min.css">
+          <link rel="stylesheet" href="css/jquery.orgchart.css">
+          <link rel="stylesheet" href="css/style.css">
+          <style type="text/css">
+            #chart-container { height:  620px; }
+            .orgchart { background: white; }
+          </style>
+        </head>
+        <body>
+          <div id="chart-container"></div>
+          <script type="text/javascript" src="js/jquery.min.js"></script>
+          <script type="text/javascript" src="js/jquery.orgchart.js"></script>
+          <script type="text/javascript">
+            $(function() {
+        
+            var datascource = {"name":"1.18 - Publications","title":"/publications","children":[{"name":"1.18.1 - Patient Education Publications","title":"/publications/patient-education","children":[{"name":"1.18.1.1 - NULL","title":"/publications/patient-education/secondaryURL"}]},{"name":"1.18.2 - PDQ&reg; - NCI's Comprehensive Database[#3604]","title":"/publications/pdq","children":[{"name":"1.18.2.1 - Cancer Information Summaries","title":"/publications/pdq/information-summaries","children":[{"name":"1.18.2.1.1 - PDQ&reg; Cancer Information Summaries: Adult Treatment[#6955]","title":"/publications/pdq/information-summaries/adult-treatment"},{"name":"1.18.2.1.2 - PDQ&reg; Cancer Information Summaries: Pediatric Treatment[#8425]","title":"/publications/pdq/information-summaries/pediatric-treatment"},{"name":"1.18.2.1.3 - PDQ&reg; Cancer Information Summaries: Supportive and Palliative Care[#7474]","title":"/publications/pdq/information-summaries/supportive-care"},{"name":"1.18.2.1.4 - PDQ&reg; Cancer Information Summaries: Screening,Detection (Testing for Cancer)[#3494]","title":"/publications/pdq/information-summaries/screening"},{"name":"1.18.2.1.5 - PDQ&reg; Cancer Information Summaries: Prevention[#7232]","title":"/publications/pdq/information-summaries/prevention"},{"name":"1.18.2.1.6 - PDQ&reg; Cancer Information Summaries: Genetics[#8371]","title":"/publications/pdq/information-summaries/genetics"},{"name":"1.18.2.1.7 - PDQ&reg; Cancer Information Summaries: Integrative, Alternative, and Complementary Therapies[#9147]","title":"/publications/pdq/information-summaries/cam"}]},{"name":"1.18.2.2 - Editorial Boards","title":"/publications/pdq/editorial-boards","children":[{"name":"1.18.2.2.1 - PDQ&reg; Adult Treatment Editorial Board[#5834]","title":"/publications/pdq/editorial-boards/adult-treatment"},{"name":"1.18.2.2.2 - PDQ&reg; Pediatric Treatment Editorial Board[#5255]","title":"/publications/pdq/editorial-boards/pediatric-treatment"},{"name":"1.18.2.2.3 - PDQ&reg; Supportive and Palliative Care Editorial Board[#6206]","title":"/publications/pdq/editorial-boards/supportive-care"},{"name":"1.18.2.2.4 - PDQ&reg; Screening and Prevention Editorial Board[#4868]","title":"/publications/pdq/editorial-boards/screening-prevention"},{"name":"1.18.2.2.5 - PDQ&reg; Cancer Genetics Editorial Board[#1659]","title":"/publications/pdq/editorial-boards/genetics"},{"name":"1.18.2.2.6 - PDQ&reg; Cancer Integrative, Alternative, and Complementary Therapies Editorial Board[#7050]","title":"/publications/pdq/editorial-boards/cam"}]},{"name":"1.18.2.3 - Levels of Evidence","title":"/publications/pdq/levels-evidence","children":[{"name":"1.18.2.3.1 - Levels of Evidence: Treatment","title":"/publications/pdq/levels-evidence/treatment"},{"name":"1.18.2.3.2 - Levels of Evidence: Supportive & Palliative Care","title":"/publications/pdq/levels-evidence/supportive-care"},{"name":"1.18.2.3.3 - Levels of Evidence: Screening & Prevention","title":"/publications/pdq/levels-evidence/screening-prevention"},{"name":"1.18.2.3.4 - Levels of Evidence: Cancer Genetics","title":"/publications/pdq/levels-evidence/genetics"},{"name":"1.18.2.3.5 - Levels of Evidence: Integrative Therapies","title":"/publications/pdq/levels-evidence/cam"}]}]},{"name":"1.18.3 - Fact Sheets","title":"/publications/fact-sheets"},{"name":"1.18.4 - NCI Dictionaries[#6088]","title":"/publications/dictionaries","children":[{"name":"1.18.4.1 - NCI Dictionary of Cancer Terms[#5600]","title":"/publications/dictionaries/cancer-terms"},{"name":"1.18.4.2 - NCI Drug Dictionary[#3583]","title":"/publications/dictionaries/cancer-drug"},{"name":"1.18.4.3 - NCI Dictionary of Genetics Terms[#7611]","title":"/publications/dictionaries/genetics-dictionary"}]},{"name":"1.18.5 - Blogs and Newsletters[#4096]","title":"/publications/blogs-newsletters"},{"name":"1.18.6 - Health Communications Publications[#4674]","title":"/publications/health-communication"},{"name":"1.18.7 - Reports","title":"/publications/reports"}]};
+
+            $('#chart-container').orgchart({
+                'data' : datascource,
+                'nodeContent': 'title',
+                'verticalDepth': 3,
+                'depth': 4
+              });
+          
+            });
+            </script>
+            </body>
+          </html>            
+        

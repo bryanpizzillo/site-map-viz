@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="utf-8">
+          <title>Section 1.22 - Emergency Information[#8572]</title>          
+          <link rel="stylesheet" href="css/font-awesome.min.css">
+          <link rel="stylesheet" href="css/jquery.orgchart.css">
+          <link rel="stylesheet" href="css/style.css">
+          <style type="text/css">
+            #chart-container { height:  620px; }
+            .orgchart { background: white; }
+          </style>
+        </head>
+        <body>
+          <div id="chart-container"></div>
+          <script type="text/javascript" src="js/jquery.min.js"></script>
+          <script type="text/javascript" src="js/jquery.orgchart.js"></script>
+          <script type="text/javascript">
+            $(function() {
+        
+            var datascource = {"name":"1.22 - Emergency Information[#8572]","title":"/emergency"};
+
+            $('#chart-container').orgchart({
+                'data' : datascource,
+                'nodeContent': 'title',
+                'verticalDepth': 3,
+                'depth': 4
+              });
+          
+            });
+            </script>
+            </body>
+          </html>            
+        

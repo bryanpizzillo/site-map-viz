@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+        <html lang="en">
+        <head>
+          <meta charset="utf-8">
+          <title>Section 1.10 - News & Events</title>          
+          <link rel="stylesheet" href="css/font-awesome.min.css">
+          <link rel="stylesheet" href="css/jquery.orgchart.css">
+          <link rel="stylesheet" href="css/style.css">
+          <style type="text/css">
+            #chart-container { height:  620px; }
+            .orgchart { background: white; }
+          </style>
+        </head>
+        <body>
+          <div id="chart-container"></div>
+          <script type="text/javascript" src="js/jquery.min.js"></script>
+          <script type="text/javascript" src="js/jquery.orgchart.js"></script>
+          <script type="text/javascript">
+            $(function() {
+        
+            var datascource = {"name":"1.10 - News & Events","title":"/news-events","children":[{"name":"1.10.1 - Press Releases","title":"/news-events/press-releases","children":[{"name":"1.10.1.1 - 2015","title":"/news-events/press-releases/2015"},{"name":"1.10.1.2 - 2014","title":"/news-events/press-releases/2014"},{"name":"1.10.1.3 - 2013","title":"/news-events/press-releases/2013"},{"name":"1.10.1.4 - 2012","title":"/news-events/press-releases/2012"},{"name":"1.10.1.5 - 2016","title":"/news-events/press-releases/2016"},{"name":"1.10.1.6 - 2017","title":"/news-events/press-releases/2017"}]},{"name":"1.10.2 - Resources for News Media[#5152]","title":"/news-events/media-resources","children":[{"name":"1.10.2.1 - Media Contacts[#1401]","title":"/news-events/media-resources/contacts"},{"name":"1.10.2.2 - Multicultural Media Outreach Program[#2076]","title":"/news-events/media-resources/multicultural","children":[{"name":"1.10.2.2.1 - Cancer Education Webinars for Multicultural Media [#5122]","title":"/news-events/media-resources/multicultural/webinars"}]},{"name":"1.10.2.3 - Cancer Research in the Media: International Workshop for Scientific Journalism[#6774]","title":"/news-events/media-resources/crim"},{"name":"1.10.2.4 - National Cancer Reporting Fellowships[#6966]","title":"/news-events/media-resources/reporting-fellowships"}]},{"name":"1.10.3 - NCI Events[#8400]","title":"/news-events/events","children":[{"name":"1.10.3.1 - Scientific Meetings & Lectures","title":"/news-events/events/scientific-meetings"},{"name":"1.10.3.2 - Scientific Conferences Where NCI Exhibits[#8766]","title":"/news-events/events/conferences"},{"name":"1.10.3.3 - Advisory Board Meetings[#1848]","title":"/news-events/events/advisory-board-meetings"},{"name":"1.10.3.4 - NCI Social Media Events[#9899]","title":"/news-events/events/social-media","children":[{"name":"1.10.3.4.1 - 2016","title":"/news-events/events/social-media/2016"},{"name":"1.10.3.4.2 - 2015","title":"/news-events/events/social-media/2015"},{"name":"1.10.3.4.3 - 2014","title":"/news-events/events/social-media/2014"}]}]},{"name":"1.10.4 - Cancer Currents: An NCI Cancer Research Blog[#3313]","title":"/news-events/cancer-currents-blog","children":[{"name":"1.10.4.1 - NULL","title":"/news-events/cancer-currents-blog/2014"},{"name":"1.10.4.2 - NULL","title":"/news-events/cancer-currents-blog/2015"},{"name":"1.10.4.3 - NULL","title":"/news-events/cancer-currents-blog/2016"},{"name":"1.10.4.4 - NULL","title":"/news-events/cancer-currents-blog/2017"}]}]};
+
+            $('#chart-container').orgchart({
+                'data' : datascource,
+                'nodeContent': 'title',
+                'verticalDepth': 3,
+                'depth': 4
+              });
+          
+            });
+            </script>
+            </body>
+          </html>            
+        
