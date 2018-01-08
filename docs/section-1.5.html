@@ -18,14 +18,12 @@
           <script type="text/javascript">
             $(function() {
         
-            var datascource = {"navIndexCode":"1.5","title":"Syndication Services[#1672]","url":"/syndication","nodeType":"DetatchedMenuedNavTreeNode","leafPages":null,"children":[{"navIndexCode":"1.5.1","title":"Subscribe to Cancer.gov RSS Feeds[#1402]","url":"/syndication/rss","nodeType":"SimpleNavTreeNode","leafPages":null,"children":[{"navIndexCode":"1.5.1.1","title":"NULL","url":"/syndication/rss/accrualnetlinks","nodeType":"HiddenNavTreeNode","leafPages":null}]},{"navIndexCode":"1.5.2","title":"NCI Dictionary of Cancer Terms Widget [#1218]","url":"/syndication/widgets","nodeType":"SimpleNavTreeNode","leafPages":null},{"navIndexCode":"1.5.3","title":"Cancer Clinical Trials API[#6576]","url":"/syndication/api","nodeType":"SimpleNavTreeNode","leafPages":null}]};
+            var datascource = {"navIndexCode":"1.5","title":"Syndication Services[#1672]","url":"/syndication","className":"DetatchedMenuedNavTreeNode","leafPages":null,"children":[{"navIndexCode":"1.5.1","title":"Subscribe to Cancer.gov RSS Feeds[#1402]","url":"/syndication/rss","className":"SimpleNavTreeNode","leafPages":null,"children":[{"navIndexCode":"1.5.1.1","title":"NULL","url":"/syndication/rss/accrualnetlinks","className":"HiddenNavTreeNode","leafPages":null}]},{"navIndexCode":"1.5.2","title":"NCI Dictionary of Cancer Terms Widget [#1218]","url":"/syndication/widgets","className":"SimpleNavTreeNode","leafPages":null},{"navIndexCode":"1.5.3","title":"Cancer Clinical Trials API[#6576]","url":"/syndication/api","className":"SimpleNavTreeNode","leafPages":null}]};
 
             var nodeTemplate = function(data) {
                 return `
-                  <div class="${data.nodeType}">
-                     <div class="title">${data.navIndexCode} ${data.title}</div>
-                     <div class="content">${data.url}</div>
-                  </div>
+                    <div class="title">${data.navIndexCode} ${data.title}</div>
+                    <div class="content">${data.url}</div>
                 `;
             };
 

@@ -18,14 +18,12 @@
           <script type="text/javascript">
             $(function() {
         
-            var datascource = {"navIndexCode":"1.11","title":"Digital Standards","url":"/digital-standards","nodeType":"DetatchedMenuedNavTreeNode","leafPages":null};
+            var datascource = {"navIndexCode":"1.11","title":"Digital Standards","url":"/digital-standards","className":"DetatchedMenuedNavTreeNode","leafPages":null};
 
             var nodeTemplate = function(data) {
                 return `
-                  <div class="${data.nodeType}">
-                     <div class="title">${data.navIndexCode} ${data.title}</div>
-                     <div class="content">${data.url}</div>
-                  </div>
+                    <div class="title">${data.navIndexCode} ${data.title}</div>
+                    <div class="content">${data.url}</div>
                 `;
             };
 

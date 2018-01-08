@@ -18,14 +18,12 @@
           <script type="text/javascript">
             $(function() {
         
-            var datascource = {"navIndexCode":"1.13","title":"Home","url":"/global","nodeType":"HiddenNavTreeNode","leafPages":null,"children":[{"navIndexCode":"1.13.1","title":"NULL","url":"/global/flash","nodeType":"HiddenNavTreeNode","leafPages":null},{"navIndexCode":"1.13.2","title":"NULL","url":"/global/files","nodeType":"HiddenNavTreeNode","leafPages":null}]};
+            var datascource = {"navIndexCode":"1.13","title":"Home","url":"/global","className":"HiddenNavTreeNode","leafPages":null,"children":[{"navIndexCode":"1.13.1","title":"NULL","url":"/global/flash","className":"HiddenNavTreeNode","leafPages":null},{"navIndexCode":"1.13.2","title":"NULL","url":"/global/files","className":"HiddenNavTreeNode","leafPages":null}]};
 
             var nodeTemplate = function(data) {
                 return `
-                  <div class="${data.nodeType}">
-                     <div class="title">${data.navIndexCode} ${data.title}</div>
-                     <div class="content">${data.url}</div>
-                  </div>
+                    <div class="title">${data.navIndexCode} ${data.title}</div>
+                    <div class="content">${data.url}</div>
                 `;
             };
 
