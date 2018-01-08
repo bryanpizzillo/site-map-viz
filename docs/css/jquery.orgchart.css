@@ -215,6 +215,15 @@
     border-radius: 4px 4px 0 0; 
   }
 
+  .orgchart .node.no-landing .title:before {
+    content: "\f05c";
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+  }
+
   .orgchart .nodes .node .title {
     background-color: rgba(47, 115, 189, 0.8);
 
