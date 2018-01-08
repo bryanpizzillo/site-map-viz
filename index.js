@@ -94,8 +94,10 @@ function outputFile(filename, title, dataSource) {
 
             var nodeTemplate = function(data) {
                 return \`
-                  <div class="title">\${data.navIndexCode} \${data.title}</div>
-                  <div class="content">\${data.url}</div>
+                  <div class="\${data.nodeType}">
+                     <div class="title">\${data.navIndexCode} \${data.title}</div>
+                     <div class="content">\${data.url}</div>
+                  </div>
                 \`;
             };
 
