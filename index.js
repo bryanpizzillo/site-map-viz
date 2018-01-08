@@ -104,7 +104,8 @@ function outputFile(filename, title, dataSource) {
                 //'nodeContent': 'title',
                 'nodeTemplate': nodeTemplate,
                 'verticalDepth': 3,
-                'depth': 4
+                'depth': 4,
+                'parentNodeSymbol': false
               });
           
             });
