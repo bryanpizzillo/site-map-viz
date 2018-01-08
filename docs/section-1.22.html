@@ -18,11 +18,19 @@
           <script type="text/javascript">
             $(function() {
         
-            var datascource = {"name":"1.22 - Emergency Information[#8572]","title":"/emergency"};
+            var datascource = {"navIndexCode":"1.22","title":"Emergency Information[#8572]","url":"/emergency","nodeType":"HiddenNavTreeNode","leafPages":null};
+
+            var nodeTemplate = function(data) {
+                return `
+                  <div class="title">${data.navIndexCode} ${data.title}</div>
+                  <div class="content">${data.url}</div>
+                `;
+            };
 
             $('#chart-container').orgchart({
                 'data' : datascource,
-                'nodeContent': 'title',
+                //'nodeContent': 'title',
+                'nodeTemplate': nodeTemplate,
                 'verticalDepth': 3,
                 'depth': 4
               });

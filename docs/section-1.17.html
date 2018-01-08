@@ -18,11 +18,19 @@
           <script type="text/javascript">
             $(function() {
         
-            var datascource = {"name":"1.17 - Social Media at NCI[#2055]","title":"/social-media","children":[{"name":"1.17.1 - Spanish-Language Social Media at NCI[#5075]","title":"/social-media/spanish"}]};
+            var datascource = {"navIndexCode":"1.17","title":"Social Media at NCI[#2055]","url":"/social-media","nodeType":"DetatchedMenuedNavTreeNode","leafPages":null,"children":[{"navIndexCode":"1.17.1","title":"Spanish-Language Social Media at NCI[#5075]","url":"/social-media/spanish","nodeType":"SimpleNavTreeNode","leafPages":null}]};
+
+            var nodeTemplate = function(data) {
+                return `
+                  <div class="title">${data.navIndexCode} ${data.title}</div>
+                  <div class="content">${data.url}</div>
+                `;
+            };
 
             $('#chart-container').orgchart({
                 'data' : datascource,
-                'nodeContent': 'title',
+                //'nodeContent': 'title',
+                'nodeTemplate': nodeTemplate,
                 'verticalDepth': 3,
                 'depth': 4
               });

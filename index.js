@@ -92,9 +92,17 @@ function outputFile(filename, title, dataSource) {
         
             var datascource = ${JSON.stringify(dataSource)};
 
+            var nodeTemplate = function(data) {
+                return \`
+                  <div class="title">\${data.navIndexCode} \${data.title}</div>
+                  <div class="content">\${data.url}</div>
+                \`;
+            };
+
             $('#chart-container').orgchart({
                 'data' : datascource,
-                'nodeContent': 'title',
+                //'nodeContent': 'title',
+                'nodeTemplate': nodeTemplate,
                 'verticalDepth': 3,
                 'depth': 4
               });

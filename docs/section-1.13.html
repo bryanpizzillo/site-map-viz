@@ -18,11 +18,19 @@
           <script type="text/javascript">
             $(function() {
         
-            var datascource = {"name":"1.13 - Home","title":"/global","children":[{"name":"1.13.1 - NULL","title":"/global/flash"},{"name":"1.13.2 - NULL","title":"/global/files"}]};
+            var datascource = {"navIndexCode":"1.13","title":"Home","url":"/global","nodeType":"HiddenNavTreeNode","leafPages":null,"children":[{"navIndexCode":"1.13.1","title":"NULL","url":"/global/flash","nodeType":"HiddenNavTreeNode","leafPages":null},{"navIndexCode":"1.13.2","title":"NULL","url":"/global/files","nodeType":"HiddenNavTreeNode","leafPages":null}]};
+
+            var nodeTemplate = function(data) {
+                return `
+                  <div class="title">${data.navIndexCode} ${data.title}</div>
+                  <div class="content">${data.url}</div>
+                `;
+            };
 
             $('#chart-container').orgchart({
                 'data' : datascource,
-                'nodeContent': 'title',
+                //'nodeContent': 'title',
+                'nodeTemplate': nodeTemplate,
                 'verticalDepth': 3,
                 'depth': 4
               });

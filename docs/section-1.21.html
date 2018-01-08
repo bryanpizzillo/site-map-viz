@@ -18,11 +18,19 @@
           <script type="text/javascript">
             $(function() {
         
-            var datascource = {"name":"1.21 - About This Website[#9469]","title":"/about-website","children":[{"name":"1.21.1 - Site Map[#8943]","title":"/about-website/sitemap"}]};
+            var datascource = {"navIndexCode":"1.21","title":"About This Website[#9469]","url":"/about-website","nodeType":"DetatchedMenuedNavTreeNode","leafPages":null,"children":[{"navIndexCode":"1.21.1","title":"Site Map[#8943]","url":"/about-website/sitemap","nodeType":"SimpleNavTreeNode","leafPages":null}]};
+
+            var nodeTemplate = function(data) {
+                return `
+                  <div class="title">${data.navIndexCode} ${data.title}</div>
+                  <div class="content">${data.url}</div>
+                `;
+            };
 
             $('#chart-container').orgchart({
                 'data' : datascource,
-                'nodeContent': 'title',
+                //'nodeContent': 'title',
+                'nodeTemplate': nodeTemplate,
                 'verticalDepth': 3,
                 'depth': 4
               });
