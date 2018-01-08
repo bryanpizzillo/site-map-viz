@@ -161,6 +161,19 @@
     width: 230px;
   }
   
+  .orgchart .node.HiddenNavTreeNode,
+  {
+    border-color: darkslategray;
+  }
+
+  .orgchart .node.MenuedNavTreeNode {
+    border: 2px solid red;
+  }
+
+  .orgchart .node.DetatchedMenuedNavTreeNode {
+    border-color: red;
+  }  
+
   .orgchart.l2r .node, .orgchart.r2l .node {
     width: 50px;
     height: 130px;
@@ -214,6 +227,18 @@
     color: #fff;
     border-radius: 4px 4px 0 0; 
   }
+
+  .orgchart .node.HiddenNavTreeNode .title {
+    
+  }
+
+  .orgchart .node.MenuedNavTreeNode .title {
+    
+  }
+
+  .orgchart .node.DetatchedMenuedNavTreeNode .title {
+    
+  }    
 
   .orgchart .node.no-landing .title:before {
     content: "\f05c";
