@@ -21,8 +21,14 @@
             var datascource = {"navIndexCode":"1.16","title":"NULL","url":"/Widgets","className":"HiddenNavTreeNode no-landing","leafPages":null};
 
             var nodeTemplate = function(data) {
+                var title = `${data.navIndexCode} ${data.title}`;
+                
+                if (data.leafPages > 0) {
+                    title = title + `<span class="leaf-pages">${data.leafPages}</span>`;
+                }
+
                 return `
-                    <div class="title">${data.navIndexCode} ${data.title}</div>
+                    <div class="title">${title}</div>
                     <div class="content">${data.url}</div>
                 `;
             };

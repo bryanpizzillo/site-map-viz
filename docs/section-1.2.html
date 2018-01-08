@@ -21,8 +21,14 @@
             var datascource = {"navIndexCode":"1.2","title":"Policies[#8366]","url":"/policies","className":"DetatchedMenuedNavTreeNode","leafPages":null,"children":[{"navIndexCode":"1.2.1","title":"Accessibility Policy[#8804]","url":"/policies/accessibility","className":"SimpleNavTreeNode","leafPages":null},{"navIndexCode":"1.2.2","title":"Comment Policy[#9537]","url":"/policies/comments","className":"SimpleNavTreeNode","leafPages":null},{"navIndexCode":"1.2.3","title":"Disclaimer of Endorsement and Liability[#4710]","url":"/policies/disclaimer","className":"SimpleNavTreeNode","leafPages":null},{"navIndexCode":"1.2.4","title":"Freedom of Information Act[#7134]","url":"/policies/foia","className":"SimpleNavTreeNode","leafPages":null},{"navIndexCode":"1.2.5","title":"Privacy and Security Policy[#3244]","url":"/policies/privacy-security","className":"SimpleNavTreeNode","leafPages":null},{"navIndexCode":"1.2.6","title":"Reuse of Graphics and Text[#7749]","url":"/policies/copyright-reuse","className":"SimpleNavTreeNode","leafPages":null},{"navIndexCode":"1.2.7","title":"Website Linking Policy[#1969]","url":"/policies/linking","className":"SimpleNavTreeNode","leafPages":null}]};
 
             var nodeTemplate = function(data) {
+                var title = `${data.navIndexCode} ${data.title}`;
+                
+                if (data.leafPages > 0) {
+                    title = title + `<span class="leaf-pages">${data.leafPages}</span>`;
+                }
+
                 return `
-                    <div class="title">${data.navIndexCode} ${data.title}</div>
+                    <div class="title">${title}</div>
                     <div class="content">${data.url}</div>
                 `;
             };
